@@ -2,7 +2,13 @@
 
 A community-made, browser-based launcher interface for compatible Eaglercraft clients.
 
-**Current launcher version: 3.0.0**
+**Current launcher version: 3.1.0**
+
+## What's new in 3.1.0
+
+- Complete graphite-and-violet UI redesign inspired by modern desktop game launchers.
+- Redesigned sidebar, dashboard, version picker, launch controls, cards and settings.
+- Improved responsive behavior and keyboard focus visibility.
 
 ## What is included
 
