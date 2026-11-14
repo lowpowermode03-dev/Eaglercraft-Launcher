@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GX-Launcher - Mods</title>
+  <title>EaglerCraft Launcher - Mods</title>
   <link rel="icon" type="image/png" href="resources/main.png">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -58,7 +58,7 @@
   <div class="title-bar">
     <div class="title-logo">
       <div class="title-dot"></div>
-      GX-LAUNCHER <span class="ver">2.5.1</span>
+      EAGLERCRAFT LAUNCHER <span class="ver">2.5.1</span>
     </div>
   </div>
 
@@ -123,7 +123,7 @@
     <!-- MAIN PANEL -->
     <div class="main-panel">
       <div class="mods-top-bar">
-        <div class="mods-title">GX-LAUNCHER <span>// MODS</span></div>
+        <div class="mods-title">EAGLERCRAFT LAUNCHER <span>// MODS</span></div>
         <div class="mods-controls">
           <input type="text" id="mod-search" placeholder="Search...">
           <button class="refresh-btn" id="installAll">Install All</button>
@@ -334,7 +334,7 @@ const MODS=[...document.querySelectorAll("#mod-grid .mod-card")].map(el=>{
   return{el,folder:f,key:clean(f)+".js",file:el.dataset.file||f+"/mod.js",
     name:el.querySelector(".mn").textContent,by:(el.querySelector(".by")||{}).textContent||"",desc:(el.querySelector(".md")||{}).textContent||""};
 });
-const MODS_BASE="https://raw.githubusercontent.com/XENOTECH-X/GX-Launcher/main/mods/";
+const MODS_BASE="https://raw.githubusercontent.com/XENOTECH-X/EaglerCraft Launcher/main/mods/";
 const modPath=p=>MODS_BASE+p.split("/").map(encodeURIComponent).join("/");
 async function fetchMod(m){
   const r=await fetch(modPath(m.file),{cache:"no-store"});
