@@ -1273,3 +1273,212 @@ html.ecl-no-motion *,html.ecl-no-motion *:before,html.ecl-no-motion *:after{anim
 @media(max-width:900px){.sidebar{width:184px;flex-basis:184px}.home-dashboard{padding:28px}.main-content{min-height:390px}}
 @media(max-width:600px){.launcher{border-radius:0;min-height:100vh}.sidebar{width:58px;flex-basis:58px}.profile{margin:8px 5px;padding:11px 2px}.home-dashboard{padding:22px 17px}.home-dashboard h1{font-size:clamp(34px,10vw,48px)}.home-subtitle{font-size:12px}.home-actions{gap:7px;margin-top:20px}.home-action{min-height:66px;padding:9px;gap:8px}.home-action>b{width:28px;height:28px;font-size:14px}.home-action span{font-size:10px}.home-action small{font-size:9px}.home-bottom-row{align-items:flex-start;flex-direction:column;margin-top:18px}.home-version-count{text-align:left}.main-content{min-height:420px}.launch-bar{display:grid;grid-template-columns:minmax(0,1fr) auto}.version-wrapper{grid-column:1 / -1;width:100%}.play-button{min-width:110px}.top-bar{padding:0 13px}}
 @media(max-width:370px){.home-actions{grid-template-columns:1fr}.home-dashboard{padding:18px}.home-dashboard h1{font-size:34px}}
+
+
+
+/* =========================================================
+   EAGLERCRAFT LAUNCHER — PRISM / TLAUNCHER INSPIRED REDESIGN
+   Independent visual design; keeps EaglerCraft identity.
+   ========================================================= */
+:root{
+  --accent:#9b8cff!important;
+  --accent-hi:#b7adff!important;
+  --accent-dim:#6554c7!important;
+  --accent-glow:rgba(139,124,255,.2)!important;
+  --bg:#111318!important;
+  --bg2:#171a22!important;
+  --bg3:#202430!important;
+  --panel:#1b1f29!important;
+  --border:#2b3040!important;
+  --border2:#414960!important;
+  --scroll:#586078!important;
+  --line2:#34394a!important;
+  --text:#d8dbea!important;
+  --text-dim:#9299ad!important;
+  --text-bright:#f4f5ff!important;
+  --hover:rgba(255,255,255,.055)!important;
+  --surface-raised:#222735;
+  --surface-soft:#1a1e28;
+  --surface-line:rgba(171,179,211,.13);
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+}
+[data-theme]{
+  --accent:#9b8cff!important;--accent-hi:#b7adff!important;--accent-dim:#6554c7!important;
+  --accent-glow:rgba(139,124,255,.2)!important;--bg:#111318!important;--bg2:#171a22!important;
+  --bg3:#202430!important;--panel:#1b1f29!important;--border:#2b3040!important;
+  --border2:#414960!important;--scroll:#586078!important;--line2:#34394a!important;
+  --text:#d8dbea!important;--text-dim:#9299ad!important;--text-bright:#f4f5ff!important;
+}
+html{background:#0d0f14;color-scheme:dark}
+body{
+  margin:0;background:
+    radial-gradient(ellipse at 12% 0%,rgba(104,87,194,.13),transparent 34%),
+    #0d0f14!important;color:var(--text)!important;
+  font-family:var(--sans)!important;letter-spacing:0!important;
+}
+.launcher{
+  width:min(1540px,100%);min-height:100vh;height:100vh;max-height:none;
+  margin:0 auto;border:1px solid #292e3c;border-radius:0!important;
+  background:var(--bg)!important;box-shadow:0 24px 90px #0008;
+}
+.title-bar{
+  min-height:54px;padding:0 22px!important;background:#151821!important;
+  border-bottom:1px solid #2a3040!important;
+}
+.title-logo{font:800 12px/1 var(--sans)!important;letter-spacing:.13em!important;color:#f4f3ff!important;gap:12px!important}
+.title-dot{width:10px!important;height:10px!important;border-radius:3px!important;background:linear-gradient(135deg,#b6aaff,#7563e9)!important;box-shadow:0 0 18px #8f7cff66!important}
+.ver{padding:5px 8px!important;border:1px solid #3c3a5c!important;border-radius:6px!important;background:#25243a!important;color:#bdb4ff!important;font:700 10px var(--sans)!important;letter-spacing:.04em!important}
+.title-controls .wdot{border-radius:50%!important}
+.content{min-height:0!important;background:var(--bg)!important}
+.sidebar{
+  width:232px!important;flex:0 0 232px!important;padding:14px 10px!important;
+  background:#151821!important;border-right:1px solid #2a3040!important;
+}
+.profile{
+  margin:5px 3px 20px!important;padding:14px!important;border:1px solid #30364a!important;
+  border-radius:11px!important;background:linear-gradient(145deg,#232638,#1a1e29)!important;
+}
+.profile-label{font:700 9px var(--sans)!important;letter-spacing:.13em!important;color:#9299ad!important;text-transform:uppercase}
+.profile-name{font:750 15px var(--sans)!important;color:#f0efff!important}
+.profile-status{font:700 9px var(--sans)!important;letter-spacing:.08em!important;color:#8f96aa!important}
+.status-dot{background:#78d6a2!important;box-shadow:0 0 8px #78d6a255!important}
+.nav-section-label{
+  padding:10px 12px 7px!important;color:#777f95!important;
+  font:800 9px var(--sans)!important;letter-spacing:.16em!important;text-transform:uppercase;
+}
+.nav-item{
+  min-height:41px!important;margin:3px 0!important;padding:10px 12px!important;gap:12px!important;
+  border:1px solid transparent!important;border-radius:8px!important;background:transparent!important;
+  color:#a9afc1!important;font:650 11px var(--sans)!important;letter-spacing:0!important;
+  transition:background .16s,border-color .16s,color .16s!important;
+}
+.nav-item:hover{background:#222633!important;border-color:#30374a!important;color:#f0efff!important;transform:none!important}
+.nav-item.selected{
+  background:linear-gradient(90deg,#393456,#29263c)!important;
+  border:1px solid #514a7b!important;border-left:3px solid #a99bff!important;
+  color:#e5e0ff!important;box-shadow:inset 0 0 18px #8978ff0c!important;
+}
+.nav-svg{width:17px!important;height:17px!important;stroke:currentColor!important;opacity:.9!important}
+.sidebar-bottom{border-top:1px solid #2a3040!important}
+.main-panel{background:#111318!important;min-width:0}
+.top-bar{
+  height:54px!important;padding:0 25px!important;background:#171a23!important;
+  border-bottom:1px solid #2a3040!important;
+}
+.game-title{font:800 11px var(--sans)!important;letter-spacing:.13em!important;color:#e7e8f5!important}
+.breadcrumb{font:500 11px var(--sans)!important;color:#7f879d!important}
+.main-content{
+  background:
+    radial-gradient(ellipse at 72% 15%,rgba(111,93,205,.12),transparent 38%),
+    linear-gradient(145deg,#191d28,#11141b 68%)!important;
+}
+.hero-image{opacity:.2!important;filter:saturate(.5) brightness(.55)!important}
+.hero-overlay{background:linear-gradient(90deg,#11141be8,#11141b88 70%,#11141b55)!important}
+.main-content::after{display:none!important}
+.home-dashboard{width:min(1000px,100%)!important;padding:clamp(26px,5vw,70px)!important}
+.home-eyebrow{color:#b8afff!important;font:800 10px var(--sans)!important;letter-spacing:.17em!important}
+.home-live-dot{background:#a99bff!important;box-shadow:0 0 12px #9a8cff!important}
+.home-dashboard h1{font:850 clamp(36px,6vw,68px)/1.02 var(--sans)!important;letter-spacing:-.055em!important;color:#f4f3ff!important}
+.home-dashboard h1 em{color:#a99bff!important}
+.home-subtitle{color:#aeb4c8!important;font-size:14px!important}
+.home-action{
+  min-height:72px!important;border:1px solid #353b50!important;border-radius:10px!important;
+  background:linear-gradient(145deg,#252a39eF,#1b202ceF)!important;color:#f0efff!important;
+  box-shadow:0 8px 22px #0002!important;backdrop-filter:blur(12px)!important;
+}
+.home-action:hover{border-color:#8578d4!important;background:#2b2b43!important;transform:translateY(-2px)!important}
+.home-action.primary{background:linear-gradient(135deg,#a99bff,#7564d9)!important;border-color:#b9adff!important;color:#151326!important}
+.home-action>b{background:#ffffff14!important;border:1px solid #ffffff16!important;border-radius:9px!important}
+.home-action small{color:inherit!important;opacity:.7!important}
+.home-tip{color:#d4d7e8!important}.home-tip-icon{border-color:#625a94!important;color:#b7adff!important}
+.home-tip small,.home-version-count small{color:#9299ad!important}
+.home-bottom-row{max-width:740px!important}
+.launch-bar{
+  padding:14px 20px!important;gap:12px!important;background:#191d27!important;
+  border-top:1px solid #30364a!important;
+}
+.version-select,.version-dropdown,.version-search-input{
+  background:#202532!important;border:1px solid #3a4258!important;border-radius:9px!important;
+  color:#e7e8f5!important;font:600 12px var(--sans)!important;
+}
+.version-select:hover,.version-select.open{border-color:#9b8cff!important;box-shadow:0 0 0 3px #9b8cff1a!important}
+.version-dropdown{box-shadow:0 22px 65px #000b!important}
+.version-option{color:#dce0f0!important}
+.version-option:hover{background:#373451!important}
+.version-badge{background:#34304f!important;color:#bcb2ff!important;border-radius:5px!important}
+.launch-mode-badge{background:#252a38!important;border:1px solid #3b4359!important;border-radius:8px!important;color:#aeb4c8!important}
+.play-button{
+  min-height:46px!important;padding:0 28px!important;border:1px solid #b7adff!important;
+  border-radius:9px!important;clip-path:none!important;
+  background:linear-gradient(135deg,#a99bff,#7968df)!important;color:#171426!important;
+  font:850 12px var(--sans)!important;letter-spacing:.1em!important;
+  box-shadow:0 4px 0 #51439b,0 9px 22px #7664df25!important;
+}
+.play-button:hover{background:linear-gradient(135deg,#c0b8ff,#9587ff)!important;transform:translateY(-1px)!important}
+.play-button:active{transform:translateY(2px)!important;box-shadow:0 1px 0 #51439b!important}
+.play-button:disabled{background:#343848!important;color:#858ba0!important;border-color:#454b5d!important;box-shadow:none!important}
+button,.settings-btn,.settings-input,.theme-swatch,.mode-card{border-radius:8px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #b6aaff!important;outline-offset:3px!important}
+.settings-scroll,.clients-content,.servers-content,.mods-content,.skins-content,.downloads-content{background:#11141b!important}
+.settings-section,.settings-row,.mode-card,.theme-swatch,.client-card,.server-card,.mod-card,.skin-card,.download-card,.tool-card,.feature-card{
+  border:1px solid #30364a!important;border-radius:11px!important;background:linear-gradient(145deg,#202532,#1a1e28)!important;
+  box-shadow:0 5px 18px #0002!important;
+}
+.settings-row{padding:16px 18px!important}
+.settings-row:hover,.mode-card:hover,.client-card:hover,.server-card:hover,.mod-card:hover,.skin-card:hover,.download-card:hover{
+  border-color:#69608f!important;background:#252a39!important;
+}
+.settings-section-title,.section-title,.clients-title,.servers-title,.mods-title,.sk-title,.dl-title{color:#c9c6e8!important}
+.settings-input,.settings-select,.mods-controls input,.sk-controls input,.dl-search-input,.refresh-controls select{
+  background:#141821!important;border:1px solid #3a4258!important;border-radius:8px!important;color:#e7e8f5!important;
+}
+.settings-btn,.refresh-btn,.hub-btn{
+  background:linear-gradient(135deg,#9b8cff,#7463d4)!important;border:1px solid #b2a8ff!important;
+  border-radius:8px!important;color:#171426!important;font-weight:800!important;
+}
+.settings-btn-ghost,.refresh-btn.ghost{background:#252a38!important;border:1px solid #3e465c!important;border-radius:8px!important;color:#c3c8da!important}
+.settings-btn:hover,.refresh-btn:hover,.hub-btn:hover{filter:brightness(1.12)!important}
+.bottom-bar{background:#151821!important;border-top:1px solid #2a3040!important;color:#858da3!important}
+.toast{border:1px solid #4a426e!important;border-radius:10px!important;background:#242337ee!important;color:#f2efff!important}
+.loading-overlay{background:#0d0f14f5!important}
+.loading-bar-wrap{border-radius:20px!important}.loading-bar{background:linear-gradient(90deg,#7564d9,#b9afff)!important}
+#ecl-global{color:#f0efff!important}
+#ecl-launcher-tools{background:linear-gradient(135deg,#9b8cff,#6f5bc9)!important;border:1px solid #b5aaff!important;color:#171426!important;border-radius:11px!important;box-shadow:0 10px 30px #0007!important}
+#ecl-panel{background:#080a10dd!important}
+#ecl-panel .ecl-window{background:linear-gradient(145deg,#24283a,#171a24)!important;border:1px solid #45405f!important;border-radius:16px!important}
+#ecl-panel .ecl-head{border-color:#3b4054!important}
+#ecl-panel button{border-radius:8px!important}
+.hub-hero{background:linear-gradient(125deg,#24283a,#191d28)!important;border:1px solid #3a4056!important;border-radius:14px!important}
+.hub-kicker{color:#b7adff!important}
+.hub-stat{background:#171b25!important;border-color:#363c51!important;border-radius:9px!important}
+.hub-stat strong{color:#b7adff!important}
+.tool-card,.feature-card{background:linear-gradient(145deg,#232838,#1a1e28)!important;border-color:#343a50!important;border-radius:10px!important}
+.tool-card h3,.feature-card h3{color:#eef0ff!important}
+input,select,textarea{accent-color:#9b8cff!important}
+a{color:#b7adff}
+a:hover{color:#d1cbff}
+@media(max-width:900px){
+ .sidebar{width:194px!important;flex-basis:194px!important}
+ .home-dashboard{padding:30px!important}
+}
+@media(max-width:600px){
+ .launcher{height:auto;min-height:100vh;border-radius:0!important}
+ .sidebar{width:58px!important;flex-basis:58px!important;padding:10px 4px!important}
+ .profile{margin:7px 2px 13px!important;padding:11px 2px!important}
+ .nav-item{justify-content:center!important;margin:4px 0!important;padding:11px 3px!important;min-height:42px!important;font-size:0!important}
+ .nav-svg{width:19px!important;height:19px!important}
+ .title-bar{min-height:48px!important;padding:0 12px!important}
+ .title-logo{font-size:9px!important;letter-spacing:.08em!important}
+ .top-bar{height:44px!important;padding:0 12px!important}
+ .home-dashboard{padding:22px 16px!important}
+ .home-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .home-action{min-height:65px!important;padding:9px!important;gap:8px!important}
+ .home-action span{font-size:10px!important}
+ .home-action small{font-size:9px!important}
+ .launch-bar{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;padding:10px!important}
+ .version-wrapper{grid-column:1/-1!important;width:100%!important}
+ .play-button{min-width:112px!important;padding:0 14px!important}
+ .settings-scroll{padding:18px 12px!important}
+}
+@media(max-width:370px){.home-actions{grid-template-columns:1fr!important}}
