@@ -38,6 +38,7 @@
   <link rel="icon" type="image/png" href="resources/main.png">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="launcher-core.js" defer></script>
 </head>
 <body>
 
@@ -129,6 +130,21 @@
         <!-- Background art -->
         <img src="./resources/fixed2.png" alt="" class="hero-image" onerror="this.style.display='none'">
         <div class="hero-overlay"></div>
+        <section class="home-dashboard">
+          <div class="home-eyebrow"><span class="home-live-dot"></span> YOUR GAME LIBRARY</div>
+          <h1>Ready to <em>play?</em></h1>
+          <p class="home-subtitle">One place for your Eaglercraft worlds, clients, servers and custom setups.</p>
+          <div class="home-actions">
+            <button class="home-action primary" onclick="document.getElementById('version-select').click();document.getElementById('version-dropdown').classList.add('open')"><b>▣</b><span>Choose a version<small>Browse available builds</small></span></button>
+            <button class="home-action" onclick="redirectToClients()"><b>◈</b><span>Explore clients<small>Find another way to play</small></span></button>
+            <button class="home-action" onclick="redirectToServers()"><b>▤</b><span>Find servers<small>Browse multiplayer</small></span></button>
+            <button class="home-action" onclick="redirectToMods()"><b>◇</b><span>Customize game<small>Mods and add-ons</small></span></button>
+          </div>
+          <div class="home-bottom-row">
+            <div class="home-tip"><span class="home-tip-icon">✦</span><div><strong>Quick tip</strong><small>Use the launcher tools button for profiles, backups, bookmarks and diagnostics.</small></div></div>
+            <div class="home-version-count"><strong>YOUR SETUP</strong><small>Customizable · Browser based · No install</small></div>
+          </div>
+        </section>
       </div>
 
       <!-- LAUNCH BAR -->
