@@ -1,4 +1,12 @@
-# EaglerCraft Launcher 3.0.0
+# EaglerCraft Launcher 3.1.0
+
+## 3.1.0 — Complete UI redesign
+
+- Replaced the forest-green look with a graphite desktop-launcher theme and violet accents.
+- Redesigned sidebar, player profile, game dashboard, version selector, launch bar, settings, cards and utility panels.
+- Improved responsive layouts, focus visibility and theme switching.
+
+## 3.0.0 — Launcher refurbishment
 
 ## Launcher refurbishment
 
