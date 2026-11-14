@@ -49,7 +49,7 @@ function setLoadingBar(pct) {
 
 // ===== THEME SYSTEM =====
 const GX_THEMES = {
-    'default':  { '--accent':'#9b8cff','--accent-hi':'#b7adff','--accent-dim':'#6554c7','--accent-glow':'rgba(139,124,255,0.2)','--border':'#2b3040','--border2':'#414960','--bg':'#111318','--bg2':'#171a22','--bg3':'#202430','--panel':'#1b1f29','--text':'#d8dbea','--text-dim':'#9299ad','--text-bright':'#f4f5ff' },
+    'default':  { '--accent':'#78b94b','--accent-hi':'#a3d96c','--accent-dim':'#426d2b','--accent-glow':'rgba(120,185,75,0.22)','--border':'#3a4432','--border2':'#61734b','--bg':'#171b16','--bg2':'#20251d','--bg3':'#2b3026','--panel':'#242920','--text':'#e0e7d5','--text-dim':'#a0aa91','--text-bright':'#f5f8ed' },
     'green':    { '--accent':'#00cc44','--accent-hi':'#00ff55','--accent-dim':'#006622','--accent-glow':'rgba(0,180,60,0.18)','--border':'#2a2a2a','--border2':'#00802b','--bg':'#070707','--bg2':'#0b0b0b','--bg3':'#101010','--panel':'#0d0d0d' },
     'blood':    { '--accent':'#9b8cff','--accent-hi':'#b7adff','--accent-dim':'#6554c7','--accent-glow':'rgba(139,124,255,0.2)','--border':'#2b3040','--border2':'#414960','--bg':'#111318','--bg2':'#171a22','--bg3':'#202430','--panel':'#1b1f29','--text':'#d8dbea','--text-dim':'#9299ad','--text-bright':'#f4f5ff' },
     'midnight': { '--accent':'#5566ff','--accent-hi':'#7788ff','--accent-dim':'#2233bb','--accent-glow':'rgba(80,100,255,0.18)','--border2':'#1a2050','--bg':'#070710','--bg2':'#0c0c1a','--bg3':'#111125','--panel':'#0e0e1e' },
@@ -61,10 +61,10 @@ const GX_THEMES = {
     'light':      { '--accent':'#cc0000','--accent-hi':'#e01010','--accent-dim':'#e8a0a0','--accent-glow':'rgba(200,0,0,0.12)','--bg':'#f1f1f1','--bg2':'#e7e7e7','--bg3':'#dddddd','--panel':'#fafafa','--border':'#cfcfcf','--border2':'#b5b5b5','--scroll':'#b5b5b5','--line2':'#b5b5b5','--text':'#333333','--text-dim':'#7a7a7a','--text-bright':'#111111','--hover':'rgba(0,0,0,0.05)' },
 };
 const GX_DEFAULTS = {
-    '--accent':'#9b8cff','--accent-hi':'#b7adff','--accent-dim':'#6554c7',
-    '--accent-glow':'rgba(139,124,255,0.2)','--bg':'#111318','--bg2':'#171a22',
-    '--bg3':'#202430','--panel':'#1b1f29','--border2':'#414960',
-    '--border':'#2b3040','--scroll':'#586078','--line2':'#34394a','--text':'#d8dbea','--text-dim':'#9299ad','--text-bright':'#f4f5ff','--hover':'rgba(255,255,255,0.045)'
+    '--accent':'#78b94b','--accent-hi':'#a3d96c','--accent-dim':'#426d2b',
+    '--accent-glow':'rgba(120,185,75,0.22)','--bg':'#171b16','--bg2':'#20251d',
+    '--bg3':'#2b3026','--panel':'#242920','--border2':'#61734b',
+    '--border':'#3a4432','--scroll':'#657b50','--line2':'#394331','--text':'#e0e7d5','--text-dim':'#a0aa91','--text-bright':'#f5f8ed','--hover':'rgba(255,255,255,0.045)'
 };
 
 function applyTheme(name) {
