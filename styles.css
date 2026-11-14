@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap');
 
 /* ============================================================
    GX-LAUNCHER 2.0 — SHARED STYLESHEET
@@ -7,21 +7,21 @@
 /* ===== THEME VARIABLES ===== */
 :root {
   --ui-scale:    1;
-  --accent:      #cc0000;
-  --accent-hi:   #ff2222;
-  --accent-dim:  #7a0000;
-  --accent-glow: rgba(200, 0, 0, 0.22);
-  --bg:          #070707;
-  --bg2:         #0b0b0b;
-  --bg3:         #101010;
-  --panel:       #0d0d0d;
-  --border:      #2a2a2a;
-  --border2:     #8a0000;
+  --accent:      #78a94f;
+  --accent-hi:   #b2d77b;
+  --accent-dim:  #456b35;
+  --accent-glow: rgba(120,169,79,.2);
+  --bg:          #101810;
+  --bg2:         #172318;
+  --bg3:         #202d20;
+  --panel:       #1a281a;
+  --border:      #354b32;
+  --border2:     #527443;
   --scroll:      #404040;
   --line2:       #404040;
-  --text:        #cccccc;
-  --text-dim:    #555555;
-  --text-bright: #eeeeee;
+  --text:        #d5dfcc;
+  --text-dim:    #91a18a;
+  --text-bright: #f0f5e9;
   --hover:       rgba(255,255,255,0.035);
   --mono:        'Share Tech Mono', monospace;
   --sans:        'Rajdhani', 'Segoe UI', sans-serif;
@@ -878,3 +878,10 @@ nav::-webkit-scrollbar-thumb { background: var(--scroll); }
 }
 .upload-option:hover { background: var(--accent-glow); color: var(--text-bright); }
 .upload-option .up-ico { width: 18px; text-align: center; font-size: 14px; flex-shrink: 0; }
+
+:root{--accent:#78a94f;--accent-hi:#b2d77b;--accent-dim:#456b35;--accent-glow:rgba(120,169,79,.2);--bg:#101810;--bg2:#172318;--bg3:#202d20;--panel:#1a281a;--border:#354b32;--border2:#527443;--text:#d5dfcc;--text-dim:#91a18a;--text-bright:#f0f5e9;--scroll:#58724c;--line2:#354b32}
+[data-theme="default"],[data-theme="blood"]{--accent:#78a94f;--accent-hi:#b2d77b;--accent-dim:#456b35;--accent-glow:rgba(120,169,79,.2);--bg:#101810;--bg2:#172318;--bg3:#202d20;--panel:#1a281a;--border:#354b32;--border2:#527443;--text:#d5dfcc;--text-dim:#91a18a;--text-bright:#f0f5e9}
+.title-logo,.game-title,.mods-title,.sk-title,.dl-title{font-family:'Press Start 2P',monospace;letter-spacing:0}.title-logo{font-size:10px;color:var(--text-bright)}
+.launcher{background:linear-gradient(135deg,#172318,#111b12 55%,#1d2b1b)}.sidebar{background:linear-gradient(180deg,#1b2b1b,#142016)}
+.nav-item.selected{background:rgba(120,169,79,.16);border-left:3px solid var(--accent);color:var(--accent-hi)}.nav-item:hover,.version-option:hover,.theme-swatch:hover{background:rgba(120,169,79,.12)}
+body{background-color:#101810;background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);background-size:16px 16px}
